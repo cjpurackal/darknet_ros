@@ -305,12 +305,14 @@ void* YoloObjectDetector::detectInThread() {
 
   if (nms > 0) do_nms_obj(dets, nboxes, l.classes, nms);
 
+  /*
   if (enableConsoleOutput_) {
     printf("\033[2J");
     printf("\033[1;1H");
     printf("\nFPS:%.1f\n", fps_);
     printf("Objects:\n\n");
   }
+  */
   image display = buff_[(buffIndex_ + 2) % 3];
   draw_detections(display, dets, nboxes, demoThresh_, demoNames_, demoAlphabet_, demoClasses_);
 
