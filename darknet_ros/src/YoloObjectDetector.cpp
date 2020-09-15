@@ -374,7 +374,7 @@ void* YoloObjectDetector::fetchInThread() {
     headerBuff_[buffIndex_] = imageAndHeader.header;
     buffId_[buffIndex_] = actionId_;
   }
-  rgbgr_image(buff_[buffIndex_]);
+  //rgbgr_image(buff_[buffIndex_]);
   letterbox_image_into(buff_[buffIndex_], net_->w, net_->h, buffLetter_[buffIndex_]);
   return 0;
 }
