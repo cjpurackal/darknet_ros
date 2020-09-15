@@ -59,7 +59,8 @@ bool YoloObjectDetector::readParameters() {
     ROS_INFO("[YoloObjectDetector] Xserver is not running.");
     viewImage_ = false;
   }
-
+  
+  viewImage_ = false;
   // Set vector sizes.
   nodeHandle_.param("yolo_model/detection_classes/names", classLabels_, std::vector<std::string>(0));
   numClasses_ = classLabels_.size();
